@@ -1,0 +1,127 @@
+[
+    {
+        "text": "Sarthak Malvadkar",
+        "type": "PERSON",
+        "context": "Company Secretary and Compliance Officer"
+    },
+    {
+        "text": "cs.connect@kshinternational.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: cs.connect@kshinternational.com"
+    },
+    {
+        "text": "+ 91 20 45053237",
+        "type": "PHONE_NUMBER",
+        "context": "Telephone: + 91 20 45053237"
+    },
+    {
+        "text": "U28129PN1979PLC141032",
+        "type": "IN_CIN",
+        "context": "CIN: U28129PN1979PLC141032"
+    },
+    {
+        "text": "Kushal Subbayya Hegde",
+        "type": "PERSON",
+        "context": "Name of the Promoter: Kushal Subbayya Hegde"
+    },
+    {
+        "text": "Pushpa Kushal Hegde",
+        "type": "PERSON",
+        "context": "Name of the Promoter: Pushpa Kushal Hegde"
+    },
+    {
+        "text": "Rajesh Kushal Hegde",
+        "type": "PERSON",
+        "context": "Name of the Promoter: Rajesh Kushal Hegde"
+    },
+    {
+        "text": "Rohit Kushal Hegde",
+        "type": "PERSON",
+        "context": "Name of the Promoter: Rohit Kushal Hegde"
+    },
+    {
+        "text": "00135070",
+        "type": "IN_DIN",
+        "context": "DIN: 00135070"
+    },
+    {
+        "text": "Sarthak.malvadkar@kshinterantional.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: Sarthak.malvadkar@kshinterantional.com"
+    },
+    {
+        "text": "Pune",
+        "type": "LOCATION",
+        "context": "Pune, Maharashtra"
+    },
+    {
+        "text": "Maharashtra",
+        "type": "LOCATION",
+        "context": "Pune, Maharashtra"
+    },
+    {
+        "text": "ksh.ipo@nuvama.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: ksh.ipo@nuvama.com"
+    },
+    {
+        "text": "customerservice.mb@nuvama.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: customerservice.mb@nuvama.com"
+    },
+    {
+        "text": "ksh@icicisecurities.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: ksh@icicisecurities.com"
+    },
+    {
+        "text": "customercare@icicisecurities.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: customercare@icicisecurities.com"
+    },
+    {
+        "text": "kshinternational.ipo@in.mpms.mufg.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: kshinternational.ipo@in.mpms.mufg.com"
+    },
+    {
+        "text": "siddharth.jadhav@hdfcbank.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: siddharth.jadhav@hdfcbank.com"
+    },
+    {
+        "text": "sachin.gawade@hdfcbank.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: sachin.gawade@hdfcbank.com"
+    },
+    {
+        "text": "Ipocmg@icicibank.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: Ipocmg@icicibank.com"
+    },
+    {
+        "text": "parag.pansare@kirtanepandit.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: parag.pansare@kirtanepandit.com"
+    },
+    {
+        "text": "hingnetare@gmail.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: hingnetare@gmail.com"
+    },
+    {
+        "text": "hitesh.ramani@citi.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: hitesh.ramani@citi.com"
+    },
+    {
+        "text": "pro@eximbankindia.in",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: pro@eximbankindia.in"
+    },
+    {
+        "text": "sharmila.joshi@indusind.com",
+        "type": "EMAIL_ADDRESS",
+        "context": "Email: sharmila.joshi@indusind.com"
+    }
+]
