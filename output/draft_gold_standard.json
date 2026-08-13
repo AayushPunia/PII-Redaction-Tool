@@ -50,6 +50,66 @@
         "context": "Email: Sarthak.malvadkar@kshinterantional.com"
     },
     {
+        "text": "Nuvama Wealth Management Limited",
+        "type": "ORGANIZATION",
+        "context": "Nuvama Wealth Management Limited"
+    },
+    {
+        "text": "ICICI Securities Limited",
+        "type": "ORGANIZATION",
+        "context": "ICICI Securities Limited ICICI Venture House Appasaheb Marathe Marg Prabhadevi, Mumbai \u2013 400 025"
+    },
+    {
+        "text": "Trilegal",
+        "type": "ORGANIZATION",
+        "context": "Legal Counsel to our Company as to Indian Law Trilegal"
+    },
+    {
+        "text": "Kirtane & Pandit LLP",
+        "type": "ORGANIZATION",
+        "context": "As certified by Kirtane & Pandit LLP, Chartered Accountants"
+    },
+    {
+        "text": "11/3, 11/4 and 11/5, Village Birdewadi, Chakan Taluka - Khed, Pune \u2013 410 501, Maharashtra, India",
+        "type": "ADDRESS",
+        "context": "having its registered office at 11/3, 11/4 and 11/5, Village Birdewadi, Chakan Taluka - Khed, Pune \u2013 410 501, Maharashtra, India"
+    },
+    {
+        "text": "201, Tower 2, Montreal Business Centre, Off Pallod Farms, Baner, Pune \u2013 411 045, Maharashtra, India",
+        "type": "ADDRESS",
+        "context": "The corporate office of our company located at 201, Tower 2, Montreal Business Centre, Off Pallod Farms, Baner, Pune \u2013 411 045, Maharashtra, India"
+    },
+    {
+        "text": "KSH International Limited",
+        "type": "NOT_PII",
+        "context": "KSH International Limited, a public limited company incorporated under the Companies Act",
+        "reason": "subject company, explicit judgment call #1, must NOT be redacted"
+    },
+    {
+        "text": "\u20b9 783.77",
+        "type": "NOT_PII",
+        "context": "Additionally, an amount of \u20b9 783.77 million from the Net Proceeds is intended to be utilised",
+        "reason": "substantive financial content, not a personal identifier"
+    },
+    {
+        "text": "page 250",
+        "type": "NOT_PII",
+        "context": "please see \u201cOur Management\u201d on page 250.",
+        "reason": "document navigation aid, not PII"
+    },
+    {
+        "text": "01217000",
+        "type": "NOT_PII",
+        "context": "01217000",
+        "reason": "bare 8-digit number that is not a DIN and lacks DIN context, should not be falsely flagged"
+    },
+    {
+        "text": "March 31, 2024",
+        "type": "NOT_PII",
+        "context": "for the years ended March 31, 2024",
+        "reason": "non-DOB date near neither born nor DOB context, ordinary filing date"
+    },
+    {
         "text": "Pune",
         "type": "LOCATION",
         "context": "Pune, Maharashtra"
@@ -68,60 +128,5 @@
         "text": "customerservice.mb@nuvama.com",
         "type": "EMAIL_ADDRESS",
         "context": "Email: customerservice.mb@nuvama.com"
-    },
-    {
-        "text": "ksh@icicisecurities.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: ksh@icicisecurities.com"
-    },
-    {
-        "text": "customercare@icicisecurities.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: customercare@icicisecurities.com"
-    },
-    {
-        "text": "kshinternational.ipo@in.mpms.mufg.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: kshinternational.ipo@in.mpms.mufg.com"
-    },
-    {
-        "text": "siddharth.jadhav@hdfcbank.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: siddharth.jadhav@hdfcbank.com"
-    },
-    {
-        "text": "sachin.gawade@hdfcbank.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: sachin.gawade@hdfcbank.com"
-    },
-    {
-        "text": "Ipocmg@icicibank.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: Ipocmg@icicibank.com"
-    },
-    {
-        "text": "parag.pansare@kirtanepandit.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: parag.pansare@kirtanepandit.com"
-    },
-    {
-        "text": "hingnetare@gmail.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: hingnetare@gmail.com"
-    },
-    {
-        "text": "hitesh.ramani@citi.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: hitesh.ramani@citi.com"
-    },
-    {
-        "text": "pro@eximbankindia.in",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: pro@eximbankindia.in"
-    },
-    {
-        "text": "sharmila.joshi@indusind.com",
-        "type": "EMAIL_ADDRESS",
-        "context": "Email: sharmila.joshi@indusind.com"
     }
 ]
