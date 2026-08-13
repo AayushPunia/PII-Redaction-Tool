@@ -13,6 +13,8 @@
 | PERSON | 1.00 | 1.00 | 1.00 | 5 | 0 | 0 | 0 |
 | PHONE_NUMBER | 1.00 | 1.00 | 1.00 | 1 | 0 | 0 | 0 |
 
+*\* Note: Entity types with 0 true positives and 0 false positives (like IN_DIN) result in a mathematically undefined (0/0) precision. By convention, this is reported as 1.00 in the table, but it represents the absence of predictions rather than a measured 100% precision.*
+
 ## Global Metrics (25-Span Sample)
 
 - **Precision:** 1.00

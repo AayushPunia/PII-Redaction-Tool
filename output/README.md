@@ -211,18 +211,21 @@ ID-card-like images elsewhere in the document.
 
 ## Known Limitations
 
-1. **Full multi-line addresses**: NER detects location components (city names,
-   states, pin codes) individually but may not capture a complete street
-   address as a single span. A purpose-built address parser would improve
-   this.
-2. **Name detection in tabular context**: spaCy's NER occasionally misses
-   names that appear as bare entries in table cells without surrounding prose.
-3. **DIN false negatives**: The very low base score (0.3) means a DIN will be
-   missed if no context word ("DIN", "Director", "Designation") appears nearby
-   in the same paragraph text — a deliberate precision-over-recall choice for
-   8-digit numbers.
-4. **Luhn residual**: ~1 in 10 random digit strings pass Luhn, so a bank
-   account number could theoretically be flagged as a credit card.
+- **Isolated Table Cells (DINs):** In complex tables, a PII value might sit
+  alone in a cell (e.g., `00135070`), while its contextual label (e.g., "DIN")
+  sits in an adjacent header or cell. Because the `AnalyzerEngine` processes
+  text paragraph-by-paragraph, the `DINRecognizer`'s context-boosting logic
+  cannot "see" across cell boundaries, leading to false negatives (as confirmed
+  in the evaluation report).
+- **Less-Common Organization Names:** As shown in the evaluation report, the tool
+  missed less-common or short multi-word organization names like `ICICI Securities Limited`
+  and `Trilegal`. This is a direct consequence of using spaCy's `en_core_web_sm` model,
+  which prioritizes speed but has lower accuracy on niche entities compared to `en_core_web_lg`.
+- **Complex Table Structures:** Deeply nested or merged tables can sometimes
+  split text runs unexpectedly, causing regex patterns to miss.
+- **Embedded Images:** The tool uses full image replacement targeting specific
+  known image paths (`media/image4.png`) rather than generic OCR masking. If
+  new ID images are added under different relationships, they will not be caught.
 
 ---
 
