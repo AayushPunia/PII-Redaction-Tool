@@ -95,20 +95,34 @@ for t, m in metrics.items():
 global_precision = safe_div(overall_tp, overall_tp + overall_fp)
 global_recall = safe_div(overall_tp, overall_tp + overall_fn)
 global_f1 = safe_div(2 * global_precision * global_recall, global_precision + global_recall)
+global_accuracy = safe_div(overall_tp + overall_tn, overall_tp + overall_tn + overall_fp + overall_fn)
 
 for t in sorted(metrics.keys()):
     if t == "NOT_PII": continue
     m = metrics[t]
+    precision = safe_div(m["TP"], m["TP"] + m["FP"])
     recall = safe_div(m["TP"], m["TP"] + m["FN"])
-    # For types with 0 predictions, precision is 0/0. By convention it is reported as 1.00.
-    report.append(f"| {t} | 1.00 | {recall:.2f} | {safe_div(2*1.0*recall, 1.0+recall):.2f} | {m['TP']} | 0 | {m['FN']} | 0 |")
+    
+    # Handle undefined precision for 0/0 cases
+    if m["TP"] == 0 and m["FP"] == 0:
+        precision_str = "N/A*"
+        f1_str = "N/A*"
+    else:
+        precision_str = f"{precision:.2f}"
+        f1 = safe_div(2 * precision * recall, precision + recall)
+        f1_str = f"{f1:.2f}"
+        
+    report.append(f"| {t} | {precision_str} | {recall:.2f} | {f1_str} | {m['TP']} | {m['FP']} | {m['FN']} | {m['TN']} |")
 
-report.append("\n*\* Note: Entity types with 0 true positives and 0 false positives (like IN_DIN) result in a mathematically undefined (0/0) precision. By convention, this is reported as 1.00 in the table, but it represents the absence of predictions rather than a measured 100% precision.*")
+report.append("\n*\* Note: Entity types with 0 true positives and 0 false positives (like IN_DIN) result in a mathematically undefined (0/0) precision. By convention, this represents the absence of predictions rather than a measured metric.*")
 
 report.append("\n## Global Metrics (25-Span Sample)\n")
+report.append(f"- **Accuracy (Entity-Level):** {global_accuracy:.2f}")
 report.append(f"- **Precision:** {global_precision:.2f}")
 report.append(f"- **Recall:** {global_recall:.2f}")
 report.append(f"- **F1 Score:** {global_f1:.2f}\n")
+
+report.append("*Note: Accuracy is reported as Entity-Level Exact/Normalized Match Accuracy over the 25-span gold standard sample. Naive full-document token accuracy is not reported as it is artifically inflated (>99%) due to the vast majority of tokens in legal prose being non-PII.*\n")
 
 report.append("## Negative Controls Performance\n")
 report.append("These 5 spans test precision by ensuring the tool does **not** over-redact non-PII:\n")

@@ -7,19 +7,22 @@
 | ADDRESS | 1.00 | 1.00 | 1.00 | 2 | 0 | 0 | 0 |
 | EMAIL_ADDRESS | 1.00 | 1.00 | 1.00 | 4 | 0 | 0 | 0 |
 | IN_CIN | 1.00 | 1.00 | 1.00 | 1 | 0 | 0 | 0 |
-| IN_DIN | 1.00 | 0.00 | 0.00 | 0 | 0 | 1 | 0 |
+| IN_DIN | N/A* | 0.00 | N/A* | 0 | 0 | 1 | 0 |
 | LOCATION | 1.00 | 1.00 | 1.00 | 2 | 0 | 0 | 0 |
 | ORGANIZATION | 1.00 | 0.50 | 0.67 | 2 | 0 | 2 | 0 |
 | PERSON | 1.00 | 1.00 | 1.00 | 5 | 0 | 0 | 0 |
 | PHONE_NUMBER | 1.00 | 1.00 | 1.00 | 1 | 0 | 0 | 0 |
 
-*\* Note: Entity types with 0 true positives and 0 false positives (like IN_DIN) result in a mathematically undefined (0/0) precision. By convention, this is reported as 1.00 in the table, but it represents the absence of predictions rather than a measured 100% precision.*
+*\* Note: Entity types with 0 true positives and 0 false positives (like IN_DIN) result in a mathematically undefined (0/0) precision. By convention, this represents the absence of predictions rather than a measured metric.*
 
 ## Global Metrics (25-Span Sample)
 
+- **Accuracy (Entity-Level):** 0.88
 - **Precision:** 1.00
 - **Recall:** 0.85
 - **F1 Score:** 0.92
+
+*Note: Accuracy is reported as Entity-Level Exact/Normalized Match Accuracy over the 25-span gold standard sample. Naive full-document token accuracy is not reported as it is artifically inflated (>99%) due to the vast majority of tokens in legal prose being non-PII.*
 
 ## Negative Controls Performance
 

@@ -11,6 +11,7 @@ env/
 .vscode/
 
 # Project specific
+input/
 input/Red_Herring_Prospectus.docx
 # Alternatively, if we expect to keep output clean on push:
 # output/redacted_output.docx
